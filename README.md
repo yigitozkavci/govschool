@@ -1,24 +1,16 @@
-# README
+# GovSchool
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+GovSchool is an alumni tracking application built for Mississippi Governor's School.
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+GovSchool is built using Ruby version 2.3.1. You will need to have PostgreSQL installed.
+You should be able to simply clone and then
 
-* System dependencies
+```
+rails db:create
+rails db:migrate
+rails start
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+You should be up and running.
