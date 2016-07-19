@@ -1,0 +1,19 @@
+h1 Alumni Directory
+
+- unless @users.empty?
+    table.table.table-striped
+      tr
+        th Name
+        th Phone
+        th Email
+        th Year Attended
+
+      - @users.each do |user|
+        tr
+          td.name          = "#{user.first_name} #{user.last_name}"
+          td.phone         = user.phone
+          td.email         = user.email
+          td.year_attended = user.year_attended
+- else
+  p
+    | No users found. Get some folks to sign up!

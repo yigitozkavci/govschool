@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root to: 'landing_pages#index'
+  get 'directory/index'
+  get 'directory/show'
 
   get 'landing_pages/index'
   get 'landing_pages/about'
@@ -11,4 +12,10 @@ Rails.application.routes.draw do
     registrations:      'users/registrations',
     sessions:           'users/sessions'
   }
+
+  authenticated :user do
+    root 'directory#index'
+  end
+
+  root 'landing_pages#index'
 end
