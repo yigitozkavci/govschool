@@ -1,6 +1,7 @@
 # GovSchool
 
-GovSchool is an alumni tracking application built for Mississippi Governor's School.
+GovSchool is an alumni tracking application built for Mississippi Governor's School using
+Rails 5.
 
 ## Installation
 
