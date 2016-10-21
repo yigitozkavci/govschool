@@ -12,6 +12,7 @@ gem 'jquery-rails'
 gem 'turbolinks',   '~> 5'
 gem 'jbuilder',     '~> 2.5'
 gem 'slim-rails'
+gem 'font-awesome-rails'
 
 gem 'redis', '~> 3.0'
 gem 'pg',           '~> 0.18'
