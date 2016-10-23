@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'directory/index'
   get 'directory/show'
+  get 'directory/autocomplete'
 
   get 'landing_pages/index'
   get 'landing_pages/about'
