@@ -1,19 +1,34 @@
 h1 Alumni Directory
 
-- unless @users.empty?
-    table.table.table-striped
-      tr
-        th Name
-        th Phone
-        th Email
-        th Year Attended
+.row
+  .col-md-12
+    .pull-right
+      = form_tag directory_index_path, class: "form-inline", method: :get do
+        .input-group
+          = text_field_tag :query, params[:query], class: "form-control", id: "user_search", autocomplete: "off"
+          .input-group-btn
+            span style='padding-left: 10px;'
+              = submit_tag "Search", class: "btn btn-primary"
+            - if params[:query].present?
+              span style='padding-left: 5px;'
+              = link_to "clear", directory_index_path, class: "btn btn-default"
 
-      - @users.each do |user|
-        tr
-          td.name          = "#{user.first_name} #{user.last_name}"
-          td.phone         = user.phone
-          td.email         = user.email
-          td.year_attended = user.year_attended
-- else
-  p
-    | No users found. Get some folks to sign up!
+.row
+  .col-md-12
+    - unless @users.empty?
+        table.table.table-striped
+          tr
+            th Name
+            th Phone
+            th Email
+            th Year Attended
+
+          - @users.each do |user|
+            tr
+              td.name          = "#{user.first_name} #{user.last_name}"
+              td.phone         = user.phone
+              td.email         = user.email
+              td.year_attended = user.year_attended
+    - else
+      p
+        | No users found. Get some folks to sign up!
