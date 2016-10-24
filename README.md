@@ -39,3 +39,7 @@ Assuming everything was successful, you should not be able to visit
 ### Notes
 
 If you need to reindex the Elasticsearch data, the easiest way is `rails searchkick:reindex:all`.
+
+## Contributing
+
+For information on contributing, check out [CONTRIBUTING.md](CONTRIBUTING.md).
