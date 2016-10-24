@@ -21,6 +21,7 @@ gem 'searchkick', '0.6.3'
 gem 'pry'
 gem 'pry-rails'
 gem 'awesome_print'
+gem 'devise-bootstrap-views'
 
 group :development do
   gem 'listen',                '~> 3.0.5'
