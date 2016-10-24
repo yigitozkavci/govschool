@@ -1,5 +1,5 @@
 class DirectoryController < ApplicationController
-  before_filter do
+  before_action do
     authenticate_user!
   end
 
