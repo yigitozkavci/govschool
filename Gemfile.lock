@@ -58,6 +58,7 @@ GEM
       railties (>= 4.1.0, < 5.1)
       responders
       warden (~> 1.2.3)
+    devise-bootstrap-views (0.0.9)
     elasticsearch (0.4.11)
       elasticsearch-api (= 0.4.11)
       elasticsearch-transport (= 0.4.11)
@@ -205,6 +206,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   coffee-rails (~> 4.2)
   devise
+  devise-bootstrap-views
   font-awesome-rails
   jbuilder (~> 2.5)
   jquery-rails
