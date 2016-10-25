@@ -1,0 +1,43 @@
+/ = bootstrap_devise_error_messages!
+.panel.panel-default.devise-bs
+  .panel-heading
+    h4= t('.title', :resource => @user, :default => "Edit User ")
+  .panel-body
+    = form_for(@user, :url => user_path, :html => { :method => :put }) do |f|
+      .form-group
+        .col-md-2
+          = f.label :title
+          = f.text_field :title, autofocus: true, class: "form-control"
+        .col-md-5
+          = f.label :first_name
+          = f.text_field :first_name, autofocus: true, class: "form-control", required: true
+        .col-md-5
+          = f.label :last_name
+          = f.text_field :last_name, autofocus: true, class: "form-control", required: true
+      .form-group
+        .col-md-6
+          = f.label :address
+          = f.text_field :address, autofocus: true, class: "form-control"
+        .col-md-3
+          = f.label :city
+          = f.text_field :city, autofocus: true, class: "form-control"
+        .col-md-1
+          = f.label :state
+          = f.text_field :state, autofocus: true, class: "form-control"
+        .col-md-2
+          = f.label :zip
+          = f.text_field :zip, autofocus: true, class: "form-control"
+      .form-group
+        .col-md-4
+          = f.label :phone
+          = f.phone_field :phone, autofocus: true, class: "form-control"
+        .col-md-8
+          = f.label :email
+          = f.email_field :email, autofocus: true, class: "form-control"
+
+      br
+      .form-group
+      = f.submit t('.update', :default => "Update"), class: "btn btn-primary", style: 'margin-top:20px;'
+p
+= link_to t('.back', :default => 'Back'), :back
+

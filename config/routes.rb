@@ -7,6 +7,12 @@ Rails.application.routes.draw do
   get 'landing_pages/about'
   get 'landing_pages/contact'
 
+  resources :admins, only: [:index] do
+    collection do
+      resources :users, only: [:index, :edit, :update], controller: 'admin/users'
+    end
+  end
+
   devise_for :users, controllers: {
     omniauth_callbacks: 'users/omniauth_callbacks',
     passwords:          'users/passwords',

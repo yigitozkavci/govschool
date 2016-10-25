@@ -1,0 +1,25 @@
+h1
+  | Users
+.row
+  .col-md-12
+    - unless @users.empty?
+        table.table.table-striped
+          tr
+            th Name
+            th Phone
+            th Email
+            th Year Attended
+            th Edit
+          - @users.each do |user|
+            tr
+              td.name          = "#{user.first_name} #{user.last_name}"
+              td.phone         = user.phone
+              td.email         = user.email
+              td.year_attended = user.year_attended
+              td 
+                a.btn.btn-success href=edit_user_path(user)
+                  i.fa.fa-cogs
+    - else
+      p
+        | No users found. Get some folks to sign up!
+
